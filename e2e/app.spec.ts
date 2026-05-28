@@ -20,7 +20,7 @@ const raceWithResults = australianResult;
 const unpublishedRace = e2eRaces[1];
 const resultDriverNames = raceWithResults.Results.slice(0, 2).map(driverName);
 
-test.describe('F1 Season Guide', () => {
+test.describe('F1 SeasonViewer', () => {
   test.beforeEach(async ({ page }) => {
     await mockF1Api(page);
   });

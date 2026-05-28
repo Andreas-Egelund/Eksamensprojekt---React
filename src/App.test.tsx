@@ -37,7 +37,7 @@ const timeBetweenFixtureRaces = new Date(
   (raceDateTime(completedRace).getTime() + raceDateTime(upcomingRace).getTime()) / 2,
 );
 
-describe('F1 Season Guide app', () => {
+describe('F1 SeasonViewer app', () => {
   beforeEach(() => {
     vi.useFakeTimers({ toFake: ['Date'] });
     vi.setSystemTime(timeBetweenFixtureRaces);

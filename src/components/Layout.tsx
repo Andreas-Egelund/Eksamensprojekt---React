@@ -16,11 +16,11 @@ export default function Layout() {
   return (
     <div className="app-shell">
       <header className="site-header">
-        <NavLink className="brand" to="/" aria-label="F1 Season Guide home">
+        <NavLink className="brand" to="/" aria-label="F1 SeasonViewer home">
           <span className="brand-mark">
             <Flag size={20} aria-hidden="true" />
           </span>
-          <strong>F1 Season Guide</strong>
+          <strong>F1 SeasonViewer</strong>
         </NavLink>
 
         <nav className="site-nav" aria-label="Main navigation">
