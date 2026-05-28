@@ -40,6 +40,13 @@ test.describe('F1 SeasonViewer', () => {
     await expect(topDrivers.getByRole('cell', { name: firstDriverName })).toBeVisible();
     await expect(topDrivers.getByRole('cell', { name: firstDriverTeam })).toBeVisible();
     await expect(topDrivers.getByRole('cell', { name: firstDriverPoints })).toBeVisible();
+    const topDriversOverflow = await topDrivers.locator('.table-wrap').evaluate((element) => ({
+      clientWidth: element.clientWidth,
+      scrollWidth: element.scrollWidth,
+    }));
+    expect(topDriversOverflow.scrollWidth).toBeLessThanOrEqual(
+      topDriversOverflow.clientWidth,
+    );
 
     await expect(page.getByText(unpublishedRace.raceName)).toBeVisible();
     await expect(page.getByText(unpublishedRace.Circuit.circuitName)).toBeVisible();

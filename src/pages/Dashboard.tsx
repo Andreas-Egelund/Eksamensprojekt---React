@@ -85,7 +85,7 @@ function DashboardContent({ data, season }: DashboardContentProps) {
         </dl>
       </section>
 
-      <section className="content-panel table-panel">
+      <section className="content-panel table-panel top-drivers-panel">
         <h2>Top Drivers</h2>
         <div className="table-wrap">
           <table>
